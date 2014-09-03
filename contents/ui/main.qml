@@ -32,5 +32,6 @@ Item {
                 addConnections(clients[i]);
             }
         }
+		workspace.clientAdded.connect(addConnections);
 	}
 }
