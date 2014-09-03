@@ -1,0 +1,25 @@
+[Desktop Entry]
+Name=Display Window Dimensions
+Comment=Shows window dimensions and position when moving or resizing
+Icon=preferences-system-windows-move
+
+X-KDE-PluginInfo-Author=Mariusz Glebocki
+X-KDE-PluginInfo-Email=mglb@arccos-1.net
+X-KDE-PluginInfo-License=GPL
+
+X-KDE-PluginInfo-Name=kwin-script-display-dimensions
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-Ordering=50
+
+X-Plasma-API=declarativescript
+X-Plasma-MainScript=ui/main.qml
+
+Type=Service
+X-KDE-ServiceTypes=KWin/Script
+# X-KDE-ServiceTypes=KWin/Script,KCModule
+
+X-KDE-ParentComponents=kwin-script-display-dimensions
+X-KDE-PluginKeyword=kwin-script-display-dimensions
+X-KDE-Library=kcm_kwin4_genericscripted
+
