@@ -17,11 +17,11 @@ Item {
     }
 
     function updateInfo(client, old) {
-        infoWindow.show(client.geometry.x, client.geometry.y, client.geometry.width, client.geometry.height);
+        infoWindow.show(client.geometry);
     }
 
-    function updateInfoRect(client, rect) {
-        infoWindow.show(rect.x, rect.y, rect.width, rect.height)
+    function updateInfoRect(client, r) {
+        infoWindow.show(r);
     }
 
     Component.onCompleted: {

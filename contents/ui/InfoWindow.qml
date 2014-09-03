@@ -7,12 +7,12 @@ import org.kde.plasma.graphicswidgets 0.1 as PlasmaWidgets
 Item {
     id: root
 
-    function show(x, y, width, height) {
+    function show(r) {
         var info = "<div align=left>%1, %2</div><div align=center><b>%3x%4</b></div><div align=right>%5, %6</div>"
-        dialogContents.text = info.arg(x).arg(y).arg(width).arg(height).arg(x + width).arg(y + height);
+        dialogContents.text = info.arg(r.x).arg(r.y).arg(r.width).arg(r.height).arg(r.x + r.width).arg(r.y + r.height);
         hideCountdown.restart();
-        dialog.x = x + Math.round((width - dialog.width) / 2)
-        dialog.y = y + Math.round((height - dialog.height) / 2)
+        dialog.x = r.x + Math.round((r.width - dialog.width) / 2)
+        dialog.y = r.y + Math.round((r.height - dialog.height) / 2)
         dialog.visible = true;
     }
 
