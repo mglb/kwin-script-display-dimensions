@@ -12,8 +12,10 @@ Item {
     }
 
     function addConnections(client) {
-        client.clientStepUserMovedResized.connect(updateInfoRect);
-        client.geometryShapeChanged.connect(updateInfo);
+		if(!client.noBorder) {
+			client.clientStepUserMovedResized.connect(updateInfoRect);
+			client.geometryShapeChanged.connect(updateInfo);
+		}
     }
 
     function updateInfo(client, old) {
@@ -28,9 +30,7 @@ Item {
         options.showGeometryTip = false;
         var clients = workspace.clientList();
         for(var i = 0; i < clients.length; ++i) {
-            if(!clients[i].noBorder) {
-                addConnections(clients[i]);
-            }
+			addConnections(clients[i]);
         }
 		workspace.clientAdded.connect(addConnections);
 	}
